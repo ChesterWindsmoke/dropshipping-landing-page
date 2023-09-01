@@ -1,0 +1,577 @@
+@font-face {
+    font-family: 'Basis Grotesque Pro Regular';
+    src: local('Basis Grotesque Pro Regular'), local('Basis-Grotesque-Pro-Regular'),
+        url('../fonts/BasisGrotesquePro-Regular.woff2') format('woff2'),
+        url('../fonts/BasisGrotesquePro-Regular.woff') format('woff'),
+        url('../fonts/BasisGrotesquePro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro Medium';
+    src: local('Basis Grotesque Pro Medium'), local('Basis-Grotesque-Pro-Medium'),
+        url('../fonts/BasisGrotesquePro-Medium.woff2') format('woff2'),
+        url('../fonts/BasisGrotesquePro-Medium.woff') format('woff'),
+        url('../fonts/BasisGrotesquePro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro Bold';
+    src: local('Basis Grotesque Pro Bold'), local('Basis-Grotesque-Pro-Bold'),
+        url('../fonts/BasisGrotesquePro-Bold.woff2') format('woff2'),
+        url('../fonts/BasisGrotesquePro-Bold.woff') format('woff'),
+        url('../fonts/BasisGrotesquePro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --black-color: #21201E;
+    --secondary-black-color: #151515;
+    --white-color: #FFF;
+    --grey-color: #959595;
+    --secondary-grey-color: rgba(21, 21, 21, 0.50);
+}
+
+/* Колір фону та текст для body */
+
+body {
+    background-color: #FFF;
+    color: var(--black-color);
+    font-family: Basis Grotesque Pro;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 1px;
+}
+
+/* Утиліти */
+
+.list {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Навігація, header */
+
+.icon {
+    display: block;
+    width: 278px;
+    height: 51px;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/logo.svg);
+
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.site-nav a {
+    color: var(--white-color);
+    font-family: Basis Grotesque Pro Regular;
+    font-size: 20px;
+        line-height: 100%;
+}
+
+.overlay {
+    background-image: linear-gradient(180deg, 
+    rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.34) 100%), 
+    url(../img/hero.jpg);
+    background-color: lightgray;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1440px;
+        max-height: 813px;
+        margin-left: auto;
+            margin-right: auto;
+            padding-top: 230px;
+            padding-bottom: 195px;
+            margin-top: -120px;
+      
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-title {
+    color: var(--white-color);
+    text-align: center;
+    font-family: Basis Grotesque Pro Bold;
+    font-size: 96px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        margin-top: 0;
+        margin-bottom: 24px;
+      
+}
+
+.hero-subtitle {
+    color: var(--white-color);
+    text-align: center;
+    font-family: Basis Grotesque Pro Regular;
+    font-size: 26px;
+        font-style: normal;
+        line-height: 140%;
+        margin-top: 0;
+        margin-bottom: 32px;
+
+}
+
+.order-btn {
+    color:var(--white-color);
+    text-align: center;
+    font-family:Basis Grotesque Pro Bold;
+    line-height: 100%; /* 20px */
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    display: flex;
+        width: 570px;
+        padding: 24px 48px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 64px;
+       background-color:#C02F3E;
+       border: none;
+       font-size: 20px;
+      
+}
+
+.order-btn:hover {
+    background-color: #911f2b;
+    cursor: pointer;
+}
+
+.order-btn:focus {
+    background-color: #911f2b;
+        cursor: pointer;
+}
+
+.section-statistic {
+    border-radius: 64px 64px 0px 0px;
+        background: var(--white-color);
+        margin-top: -62px;
+        padding-top: 120px;
+        padding-bottom: 240px;
+}
+
+.statistic {
+    display: flex;
+}
+
+
+.statistic-title {
+    color: var(--black-color);
+    font-family:Basis Grotesque Pro Medium;
+    font-size: 65px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        /* 65px */
+        margin: 0;
+}
+
+
+.statistic-block {
+    display: flex;
+    gap: 60px;
+    margin-top: 74px;
+}
+
+.first-list {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.second-list {
+    padding-left: 0;
+        margin-top: 0;
+}
+
+.statistic-paragraph {
+    color: var(--grey-color);
+    font-family: Basis Grotesque Pro Regular;
+    font-size: 16px;
+        font-style: normal;
+        line-height: 100%;
+        /* 16px */
+        margin-top: 16px;
+        margin-bottom: 72px;
+}
+
+.statistic-paragraph-last {
+    color: var(--grey-color);
+        font-family: Basis Grotesque Pro Regular;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 100%;
+        /* 16px */
+        margin-top: 16px;
+       margin-bottom: 0;
+
+}
+
+.second-part-first-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 590px;
+    margin-left: 60px;
+
+}
+
+.statistic-second-title {
+    color: var(--black-color);
+    font-family: 'Basis Grotesque Pro Bold';
+    font-size: 41px;
+        font-style: normal;
+        line-height: 120%;
+        /* 49.2px */
+        margin-top: 0;
+        margin-bottom: 32px; 
+
+}
+
+.statistic-second-paragraph {
+    color: var(--grey-color);
+    font-family: 'Basis Grotesque Pro Regular';
+    font-size: 16px;
+        font-style: normal;
+        line-height: 140%;
+            /* 22.4px */
+            margin-top: 0;
+            margin-bottom: 32px;
+            width: 570px;
+}
+
+.section-pricing {
+    background-color: #F0F0F0;
+    border-radius: 64px 64px 0px 0px;
+    padding-top: 120px;
+    padding-bottom: 240px;
+    margin-top: -120px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.section-pricing-block {
+    display: flex;
+        flex-wrap: wrap;
+}
+
+.pricing-list {
+    padding-left: 0;
+    margin-left: 60px;
+    margin-top: 43px;
+    margin-bottom: 0;
+}
+
+.watch-item {
+    position: relative;
+    width: 570px;
+    height: 570px;
+    border-radius: 24px;
+}
+
+.price-title {
+    color: var(--black-color);
+    font-family: 'Basis Grotesque Pro Regular';
+    font-size: 26px;
+    line-height: 100%;
+        /* 26px */
+        margin-top: 0;
+        margin-bottom: 16px;
+    
+}
+
+.price {
+    color:var(--black-color);
+    font-family: Basis Grotesque Pro Medium;
+    font-size: 65px;
+        line-height: 100%;
+        /* 65px */
+        margin-top: 0;
+        margin-bottom: 32px;
+
+}
+
+.last-price {
+    color: #48B237;
+        font-family: Basis Grotesque Pro Medium;
+        font-size: 65px;
+        line-height: 100%;
+        /* 65px */
+        margin-top: 0;
+        margin-bottom: 0;
+     
+
+}
+
+.last-price sup {
+    font-size: 26px;
+}
+
+.price sup {
+    font-size: 26px;
+}
+
+.right-btn {
+    margin-left: auto;
+    /* margin-bottom: 42px; */
+   
+}
+
+.benefits-title {
+    color: var(--black-color);
+        font-family: Basis Grotesque Pro Medium;
+        font-size: 65px;
+        line-height: 100%;
+            /* 65px */
+            margin-top: 0;
+            margin-bottom: 16px;
+            margin-top: 196.5px;
+}
+
+.benefits-subtitle {
+    color: var(--secondary-grey-color);
+    font-family: 'Basis Grotesque Pro Regular';
+    font-size: 16px;
+    line-height: 140%;
+        /* 22.4px */
+        margin-top: 0;
+        margin-bottom: 48px;
+
+}
+
+.benefits-order-btn {
+    display: flex;
+        width: 570px;
+        padding: 24px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 64px;
+            background:#C02F3E;
+            border: none;
+            color:#FFF;
+                text-align: center;
+                font-family: 'Basis Grotesque Pro Bold';
+                font-size: 20px;
+                line-height: 100%;
+                /* 20px */
+                letter-spacing: 2px;
+                text-transform: uppercase;
+}
+
+.benefits-order-btn:hover {
+    background-color: #911f2b;
+        cursor: pointer;
+}
+
+.benefits-order-btn:focus {
+    background-color: #911f2b;
+    cursor: pointer;
+}
+
+.guide-section {
+    background-color: var(--black-color);
+    border-radius: 64px 64px 0px 0px;
+    margin-top: -120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.guide-title {
+    color: var(--white-color);
+    font-family: Basis Grotesque Pro Medium;
+    font-size: 65px;
+        line-height: 100%;
+        /* 65px */
+        margin-top: 0;
+        margin-bottom: 83px;
+       
+}
+
+.step {
+    color:#C02F3E;
+    font-family: Basis Grotesque Pro Medium;
+        font-size: 16px;
+        line-height: 100%;
+        /* 16px */
+        margin-top: 0;
+        margin-bottom: 12px;
+}
+
+.step-title {
+    color:var(--white-color);
+    font-family: Basis Grotesque Pro Medium;
+    font-size: 26px;
+        line-height: 120%;
+        /* 31.2px */
+        margin-top: 0;
+        margin-bottom: 12px;
+
+}
+
+.explanation {
+    color: var(--grey-color);
+    font-family: 'Basis Grotesque Pro Regular';
+        font-size: 16px;
+        line-height: 140%;
+        /* 22.4px */
+        margin-top: 0;
+        margin-bottom: 32px;
+}
+
+.section-benefits {
+    background-color: var(--white-color);
+    margin-top: -120px;
+    border-radius: 64px 64px 0px 0px;
+    padding-top: 120px;
+    padding-bottom: 240px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.benefits-block {
+    display: flex;
+}
+
+.benefits-left-side {
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+}
+
+.guide-block {
+    display: flex;
+}
+
+.guide-item {
+    width: 570px;
+    height: 772px;
+    border-radius: 48px;
+}
+
+.guide-order-btn {
+
+    color: var(--white-color);
+        text-align: center;
+        font-family: Basis Grotesque Pro Bold;
+        line-height: 100%;
+        /* 20px */
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: flex;
+        width: 570px;
+        padding: 24px 48px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 64px;
+        background-color: #C02F3E;
+        border: none;
+        font-size: 20px;
+        margin-left: auto;
+
+}
+
+.guide-order-btn:hover {
+    background-color: #911f2b;
+        cursor: pointer;
+}
+
+.guide-order-btn:focus {
+    background-color: #911f2b;
+    cursor: pointer;
+}
+
+/* Кнопки слайдера */
+
+.left-slider-btn {
+    position: absolute;
+    left: 170px;
+    top: 2050px;
+    width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: rgba(149, 149, 149, 0.10);
+        border: none;
+}
+
+.right-slider-btn {
+    position: absolute;
+    left: 618px;
+    top: 2050px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(149, 149, 149, 0.10);
+    border: none;
+}
+
+.slider-item {
+    width: 14.82px;
+        height: 24px;
+        justify-content: center;
+        align-items: center;
+}
+
+.benefits-slider-btn {
+    width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: rgba(149, 149, 149, 0.10);;
+        border: none;
+
+}
+
+.benefits-slider-items {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 48px;
+}
+
+.benefits-item {
+    border-radius: 24px;
+}
+
+.step-list {
+    margin-top: 0;
+    margin-bottom: 0;
+}
